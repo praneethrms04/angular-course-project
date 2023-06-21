@@ -1,0 +1,56 @@
+<div class="max-w-lg p-4 shadow-md dark:text-gray-100">
+  <div class="flex justify-between pb-4 border-bottom">
+    <div class="flex items-center">
+      <a
+        rel="noopener noreferrer"
+        href="#"
+        class="mb-0 font-medium text-[18px] capitalize dark:text-gray-100"
+        >Recipe Name</a
+      >
+    </div>
+  </div>
+  <div class="space-y-4">
+    <div class="space-y-2">
+      <img
+        src="https://source.unsplash.com/random/480x360/?4"
+        alt=""
+        class="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500"
+      />
+    </div>
+    <div class="space-y-2">
+      <div class="btn bg-blue-400 text-center p-2 rounded-lg">
+        <button class="" (click)="toggleDropdown()">Manage recipe</button>
+        <div
+          *ngIf="showDropdown"
+          class="absolute right-0 mt-2 py-2 w-48 bg-blue-400 rounded-lg shadow-md"
+        >
+          <a
+            class="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+            href="#"
+            >To Shoping</a
+          >
+          <a
+            class="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+            href="#"
+            >Edit Recipe</a
+          >
+          <a
+            class="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+            href="#"
+            >Delete Recipe</a
+          >
+        </div>
+      </div>
+      <a rel="noopener noreferrer" href="#" class="block">
+        <h3 class="text-xl font-semibold dark:text-violet-400">
+          Facere ipsa nulla corrupti praesentium pariatur architecto
+        </h3>
+      </a>
+      <p class="leadi dark:text-gray-400">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat,
+        excepturi. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Repellat, excepturi.
+      </p>
+    </div>
+  </div>
+</div>
