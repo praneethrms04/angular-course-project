@@ -6,24 +6,9 @@
   </div>
 </div>
 <div class="flex flex-col gap-4">
-  <a href="#" *ngFor="let recipe of recipes">
-    <div
-      class="flex flex-row justify-between bg-[#DDE6ED] text-[#27374D] gap-5 p-2 rounded-xl items-center"
-    >
-      <div class="">
-        <h4 class="text-[18px] font-medium">{{ recipe.name }}</h4>
-        <p class="font-normal text-[18px]">
-          {{ recipe.description }}
-        </p>
-      </div>
-      <div class="flex flex-col">
-        <img
-          [src]="recipe.imgPath"
-          alt="{{ recipe.name }}"
-          class="object-cover w-16 rounded-full h-16"
-        />
-      </div>
-    </div>
-  </a>
-  <app-recipe-item></app-recipe-item>
+  <app-recipe-item
+    *ngFor="let recipeEle of recipes"
+    [recipe]="recipeEle"
+    (recipeSelected)="onRecipeSelected(recipeEle)"
+  ></app-recipe-item>
 </div>

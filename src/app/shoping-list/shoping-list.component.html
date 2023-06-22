@@ -1,9 +1,11 @@
 <div class="flex flex-row p-10">
   <div class="flex flex-col">
-    <app-shoping-edit></app-shoping-edit>
+    <app-shoping-edit
+      (ingredientAdded)="onIngredientAdded($event)"
+    ></app-shoping-edit>
     <hr />
     <a href="#" *ngFor="let item of ingredients" class="">
-      <div class="bg-slate-500">
+      <div style="border: 1px solid green">
         <p>{{ item.name }} ({{ item.amount }})</p>
       </div>
     </a>
