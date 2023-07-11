@@ -1,14 +1,14 @@
 <div class="flex flex-row">
   <div class="flex flex-col">
-    <button class="btn bg-blue-400 my-3 rounded-xl p-2 font-semibold">
+    <button class="btn bg-blue-400 my-3 rounded-xl p-2 font-semibold" (click)="onNewRecipe()" >
       New Recipe
     </button>
   </div>
 </div>
 <div class="flex flex-col gap-4">
   <app-recipe-item
-    *ngFor="let recipeEle of recipes"
+    *ngFor="let recipeEle of recipes; index as i"
     [recipe]="recipeEle"
-    (recipeSelected)="onRecipeSelected(recipeEle)"
+    [index]="i"
   ></app-recipe-item>
 </div>

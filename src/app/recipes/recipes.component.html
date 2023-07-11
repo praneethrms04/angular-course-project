@@ -1,13 +1,13 @@
 <div class="flex flex-row justify-between">
   <div class="flex p-10">
-    <app-recipe-list
-      (recipeWasSelected)="selectedRecipe = $event"
-    ></app-recipe-list>
+    <app-recipe-list></app-recipe-list>
   </div>
   <div class="flex">
-    <app-recipe-detail
-      *ngIf="selectedRecipe; else templateName" [recipe] ="selectedRecipe"
-    ></app-recipe-detail>
-    <ng-template #templateName> Please select Recipe...! </ng-template>
+    <!-- <app-recipe-detail
+      *ngIf="selectedRecipe"
+      [recipe]="selectedRecipe"
+    ></app-recipe-detail> -->
+    <!-- <ng-template #templateName> Please select Recipe...! </ng-template> -->
+    <router-outlet></router-outlet>
   </div>
 </div>

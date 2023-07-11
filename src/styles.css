@@ -2,3 +2,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+  color: yellow;
+  background-color: brown;
+  width: auto;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+}
